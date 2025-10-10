@@ -46,7 +46,7 @@
 
 ### Cancer Type Distribution
 
-![Age at Diagnosis Distribution](Cancer_Distribution.png)
+![Age at Diagnosis Distribution](Grade_vs_Tumor_Size.png)
 
 
 
