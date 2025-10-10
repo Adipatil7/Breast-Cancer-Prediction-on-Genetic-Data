@@ -32,19 +32,19 @@
 
 ---
 
-### Relation between Age of patient and Type of Cancer
+### 🔹 Relation between Age of patient and Type of Cancer
 
 ![Age vs. Cancer Type](Age_vs_CancerType.png)
 
 ---
 
-### Cancer Type Distribution
+### 🔹 Cancer Type Distribution
 
 ![Cancer Type Distribution](Cancer_Distribution.png)
 
 ---
 
-### Tumor Size vs Grade
+### 🔹 Tumor Size vs Grade
 
 ![Grade vs Tumor Size](Grade_vs_Tumor_Size.png)
 
