@@ -1,8 +1,9 @@
 # 🧬 Bioinformatics – ML Challenge
 
+---
+
 ## 🔍 Data Understanding
 
----
 
 ### 🧑‍⚕️ 1. Clinical Data
 - **Patient Attributes:**  
@@ -12,7 +13,7 @@
 - **Purpose:**  
   Enables correlation between **genomic profiles** and **clinical outcomes**, forming the foundation for survival and subtype analysis.
 
----
+
 
 ### 🧫 2. Genomic Alteration Data
 - **Copy Number Alterations (CNA):**  
@@ -22,7 +23,7 @@
 - **Gene Panel Matrix:**  
   Acts as a **binary mask** indicating which genes were sequenced or profiled per sample.
 
----
+
 
 ### 🧬 3. Transcriptomic & Epigenetic Data
 - **mRNA Expression (Raw + Z-Score):**  
@@ -67,7 +68,6 @@ Examples: AGE, NPI, LYMPH_NODES_EXAMINED_POSITIVE
 Examples: CELLULARITY, CHEMOTHERAPY, HORMONE_THERAPY  
 - Encoding: One-Hot for nominal, Ordinal for ordered categories.
 
----
 
 ## 🔹 Gene Expression Features
 
@@ -77,13 +77,44 @@ Examples: CELLULARITY, CHEMOTHERAPY, HORMONE_THERAPY
 3. PCA → capture main variance patterns  
 4. RFE (Random Forest) → retain top-ranked features
 
----
+
 
 ## 🎯 Outcome
 
 - Integrated clinical + gene features  
-- Reduced features from 20,639 → 117 informative  
+- Reduced features from 20,639 → 8363 informative  
 - Noise-free dataset ready for high-accuracy classification
+
+---
+
+## 🤖 Model Building and Optimization
+
+### 🌲 Random Forest Classifier  
+We chose the **Random Forest** algorithm as our baseline model for classification due to its robustness, interpretability, and high performance on tabular biomedical datasets.  
+It is an **ensemble learning** method that constructs multiple decision trees during training and combines their predictions to improve generalization.
+
+#### 🔹 Why Random Forest?
+- Handles both **numerical and categorical** data effectively  
+- Automatically performs **feature importance ranking**  
+- Reduces risk of **overfitting** compared to individual decision trees  
+- Works well even with **imbalanced** and **high-dimensional** genomic datasets  
+- Provides strong **baseline accuracy** without extensive tuning  
+
+### ⚙️ Hyperparameter Tuning with Grid Search CV  
+To further enhance model performance, we applied **Grid Search Cross-Validation (GridSearchCV)** with **5-fold CV** to systematically explore hyperparameter combinations such as:  
+- Number of estimators (`100`)  
+- Maximum depth of trees (`max_depth`)  
+- Minimum samples per split (`min_samples_split`)  
+- Criterion (`gini` or `entropy`)  
+
+This process ensures an optimal balance between **bias and variance**, improving model generalization.
+
+### 📈 Model Performance  
+After tuning, the optimized Random Forest achieved:  
+- **Accuracy:** ~92% on the validation dataset  
+- **Precision and Recall:** Both remained consistently high, indicating balanced predictions  
+- **Feature Insights:** Top contributing features included key clinical indicators and selected gene expression markers
+
 
 
 
