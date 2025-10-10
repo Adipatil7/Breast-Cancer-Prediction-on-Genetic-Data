@@ -115,6 +115,34 @@ After tuning, the optimized Random Forest achieved:
 - **Precision and Recall:** Both remained consistently high, indicating balanced predictions  
 - **Feature Insights:** Top contributing features included key clinical indicators and selected gene expression markers
 
+---
+
+## ⚠️ Challenges Faced
+
+During the project, several challenges were encountered that required careful consideration:
+
+### 1️⃣ Data Segregation and Collection
+- The dataset included **clinical, genomic, and transcriptomic features** with different formats and identifiers.  
+- Mapping patients to samples and integrating multiple data types required extensive preprocessing and cleaning.  
+
+### 2️⃣ High Dimensionality and Feature Selection
+- Gene expression data contained **~20,000 features**, which can lead to **noise and computational overhead**.  
+- We applied hybrid dimensionality reduction techniques (Variance Threshold, ANOVA F-Test, PCA, RFE) to retain biologically relevant features.  
+
+### 3️⃣ Model Selection and Overfitting
+- Choosing an appropriate model that balances **accuracy and generalization** was critical.  
+- Random Forest helped mitigate overfitting, but **hyperparameter tuning** with Grid Search CV was required to achieve optimal performance.  
+
+### 4️⃣ Imbalanced and Missing Data
+- Some categorical and numeric clinical variables had **missing values**, while cancer subtypes were **unevenly represented**.  
+- Strategies like median imputation, encoding, and careful cross-validation were employed to handle these issues.  
+
+### 5️⃣ Computational Constraints
+- Handling high-dimensional omics data required **efficient preprocessing** and **feature reduction** to make model training feasible on standard hardware.  
+
+> 💡 *Overall, addressing these challenges ensured a robust, interpretable, and high-performing breast cancer subtype prediction model.*
+
+
 
 
 
