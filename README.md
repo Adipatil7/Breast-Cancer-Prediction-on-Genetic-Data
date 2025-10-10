@@ -48,6 +48,44 @@
 
 ![Grade vs Tumor Size](Grade_vs_Tumor_Size.png)
 
+---
+
+# 🧬 Data Preprocessing Pipeline
+
+To build a robust breast cancer subtype prediction model, the dataset was split into **clinical** and **gene expression** features and processed to ensure quality and reduce dimensionality.
+
+---
+
+## 🔹 Clinical Features
+
+### Numerical Variables  
+Examples: AGE, NPI, LYMPH_NODES_EXAMINED_POSITIVE  
+- Imputation: Missing values filled using median.  
+- Scaling: StandardScaler applied for normalized input.
+
+### Categorical Variables  
+Examples: CELLULARITY, CHEMOTHERAPY, HORMONE_THERAPY  
+- Encoding: One-Hot for nominal, Ordinal for ordered categories.
+
+---
+
+## 🔹 Gene Expression Features
+
+~20K gene columns reduced using hybrid techniques:  
+1. Variance Threshold → remove low-variance genes  
+2. ANOVA F-Test → select statistically significant genes  
+3. PCA → capture main variance patterns  
+4. RFE (Random Forest) → retain top-ranked features
+
+---
+
+## 🎯 Outcome
+
+- Integrated clinical + gene features  
+- Reduced features from 20,639 → 117 informative  
+- Noise-free dataset ready for high-accuracy classification
+
+
 
 
 
