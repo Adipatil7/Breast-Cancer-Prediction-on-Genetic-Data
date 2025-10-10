@@ -105,7 +105,7 @@ It is an **ensemble learning** method that constructs multiple decision trees du
 - Works well even with **imbalanced** and **high-dimensional** genomic datasets  
 - Provides strong **baseline accuracy** without extensive tuning  
 
-### ⚙️ Hyperparameter Tuning with Grid Search CV  
+### ⚙️ Hyperparameter Tuning with Random Search CV  
 To further enhance model performance, we applied **Random Search Cross-Validation (RandomSearchCV)** with **5-fold CV** to systematically explore hyperparameter combinations such as:  
 **Best Parameters after tuning:**  
 ```python
