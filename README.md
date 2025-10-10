@@ -42,6 +42,12 @@
 
 ![Age at Diagnosis Distribution](Cancer_Distribution.png)
 
+---
+
+### Cancer Type Distribution
+
+![Age at Diagnosis Distribution](Cancer_Distribution.png)
+
 
 
 
