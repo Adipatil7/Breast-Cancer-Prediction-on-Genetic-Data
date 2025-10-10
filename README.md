@@ -101,12 +101,15 @@ It is an **ensemble learning** method that constructs multiple decision trees du
 - Provides strong **baseline accuracy** without extensive tuning  
 
 ### ⚙️ Hyperparameter Tuning with Grid Search CV  
-To further enhance model performance, we applied **Grid Search Cross-Validation (GridSearchCV)** with **5-fold CV** to systematically explore hyperparameter combinations such as:  
-- Number of estimators (`100`)  
-- Maximum depth of trees (`max_depth`)  
-- Minimum samples per split (`min_samples_split`)  
-- Criterion (`gini` or `entropy`)  
-
+To further enhance model performance, we applied **Random Search Cross-Validation (RandomSearchCV)** with **5-fold CV** to systematically explore hyperparameter combinations such as:  
+**Best Parameters after tuning:**  
+```python
+{'n_estimators': 200, 
+ 'min_samples_split': 5, 
+ 'min_samples_leaf': 1, 
+ 'max_features': 'sqrt', 
+ 'max_depth': 10}  
+```
 This process ensures an optimal balance between **bias and variance**, improving model generalization.
 
 ### 📈 Model Performance  
@@ -131,7 +134,7 @@ During the project, several challenges were encountered that required careful co
 
 ### 3️⃣ Model Selection and Overfitting
 - Choosing an appropriate model that balances **accuracy and generalization** was critical.  
-- Random Forest helped mitigate overfitting, but **hyperparameter tuning** with Grid Search CV was required to achieve optimal performance.  
+- Random Forest helped mitigate overfitting, but **hyperparameter tuning** with Random Search CV was required to achieve optimal performance.  
 
 ### 4️⃣ Imbalanced and Missing Data
 - Some categorical and numeric clinical variables had **missing values**, while cancer subtypes were **unevenly represented**.  
