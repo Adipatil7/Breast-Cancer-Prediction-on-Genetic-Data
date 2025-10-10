@@ -1,3 +1,5 @@
+colab link :- https://colab.research.google.com/drive/1byc0gJDLRd7o_35KXdBIlU8KxnhNpeDW?usp=sharing
+
 # 🧬 Bioinformatics – ML Challenge
 
 ---
@@ -59,12 +61,12 @@ To build a robust breast cancer subtype prediction model, the dataset was split 
 
 ## 🔹 Clinical Features
 
-### Numerical Variables  
+### SimpleImputer(strategy=median) 
 Examples: AGE, NPI, LYMPH_NODES_EXAMINED_POSITIVE  
 - Imputation: Missing values filled using median.  
 - Scaling: StandardScaler applied for normalized input.
 
-### Categorical Variables  
+### OneHotEncoding
 Examples: CELLULARITY, CHEMOTHERAPY, HORMONE_THERAPY  
 - Encoding: One-Hot for nominal, Ordinal for ordered categories.
 
@@ -114,7 +116,10 @@ This process ensures an optimal balance between **bias and variance**, improving
 
 ### 📈 Model Performance  
 After tuning, the optimized Random Forest achieved:  
-- **Accuracy:** ~92% on the validation dataset  
+- **Accuracy:(Before RandomSearchCV)** 90.836%
+- **Accuracy:(After RandomSearchCV)** 91.36% 
+- **F1_Score:(Before RandomSearchCV)** 0.89433
+- **F1_Score:(After RandomSearchCV)** 0.9203
 - **Precision and Recall:** Both remained consistently high, indicating balanced predictions  
 - **Feature Insights:** Top contributing features included key clinical indicators and selected gene expression markers
 
@@ -145,7 +150,8 @@ During the project, several challenges were encountered that required careful co
 
 > 💡 *Overall, addressing these challenges ensured a robust, interpretable, and high-performing breast cancer subtype prediction model.*
 
-
+## Possible Improvements
+- To improve model performance this model can be combined with XGBOOST to make a Hybrid model
 
 
 
