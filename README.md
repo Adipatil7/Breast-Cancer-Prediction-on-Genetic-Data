@@ -34,7 +34,7 @@
 
 ### Age Distribution of Patients
 
-![Age at Diagnosis Distribution](images/)
+![Age at Diagnosis Distribution](Age_vs_CancerType.png)
 
 
 
