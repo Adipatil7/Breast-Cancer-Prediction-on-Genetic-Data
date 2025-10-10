@@ -32,6 +32,9 @@
 
 ---
 
+### Age Distribution of Patients
+
+![Age at Diagnosis Distribution](images/)
 
 
 
