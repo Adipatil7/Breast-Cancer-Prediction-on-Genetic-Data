@@ -1,4 +1,7 @@
 colab link :- https://colab.research.google.com/drive/1byc0gJDLRd7o_35KXdBIlU8KxnhNpeDW?usp=sharing
+Raw dataset link :- https://drive.google.com/drive/folders/1YSX-gHFVuwFQiyF1HL5odyEq7ggooQyx?usp=sharing
+
+download above dataset to run the colab.(Also dataset in the repo will be required so upload both before running colab)
 
 # 🧬 Bioinformatics – ML Challenge
 
