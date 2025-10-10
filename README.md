@@ -32,9 +32,15 @@
 
 ---
 
-### Age Distribution of Patients
+### Relation between Age of patient and Type of Cancer
 
 ![Age at Diagnosis Distribution](Age_vs_CancerType.png)
+
+---
+
+### Cancer Type Distribution
+
+![Age at Diagnosis Distribution](Cancer_Distribution.png)
 
 
 
